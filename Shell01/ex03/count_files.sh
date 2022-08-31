@@ -1,1 +1,2 @@
-find . | wc -l | tail -c 2
+find . \( -type f -o -type d \) | wc -l | tr -d ' '
+
