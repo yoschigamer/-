@@ -1,2 +1,1 @@
-cd ..
-git ls-files --others --ignored --exclude-standard
+git status -s --ignored | grep \?\? | sed 's/??//'
