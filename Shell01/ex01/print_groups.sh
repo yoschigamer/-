@@ -1,1 +1,1 @@
-id -Gn $FT_USER | sed "s/ /,/"
+id -Gn $FT_USER | sed "s/ /,/" | tr -d '\n'
