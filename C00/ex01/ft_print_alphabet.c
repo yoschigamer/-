@@ -1,17 +1,18 @@
-#include <unistd.h>
+#include <stdio.h> //ligne d'inclusion de la bibliothèque stdio.h, directive de preprocesseur
 
-void ft_print_alphabet(void)
+void ft_print_alphabet(void) 
 {
-    char c = 'a';
-    for(int i = 0 ; i < 26 ; i++)
+    char ch; // déclaration de la variable ch de type char
+    ch = 'a'; // affectation de la valeur 'a' à la variable ch
+    while (ch <= 'z') // boucle while qui s'exécute tant que la valeur de la variable ch est inférieure ou égale à 'z'
     {
-        write(1, &c, 1);
-        c++;
+        printf("%c", ch); // affichage de la valeur de la variable ch
+        ch++; // incrémentation de la valeur de la variable ch
     }
-    write(1, "\n", 1);
 }
 
-int main()
+int main(void)
 {
-    ft_print_alphabet();
+    ft_print_alphabet(); // appel de la fonction ft_print_alphabet
+    return (0); // retourne 0
 }
