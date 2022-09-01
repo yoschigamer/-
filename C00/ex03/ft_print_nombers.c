@@ -1,18 +1,24 @@
-#include <stdio.h>
-
-void ft_print_numbers(void) 
-{
-    char n; // n est une variable de type char
-    n = '0'; // n prend la valeur 0
-    while (n <= '9') 
-    {   
-	write(1, &n, 1); // write est une fonction qui permet d'écrire un message sur la sortie standard
-        n++; // incrémente n de 1
-    }
-}
-
-int main(void)
-{
-    ft_print_numbers(); // appel de la fonction ft_print_numbers
-    return 0; // retourne 0
-}
+  1 /* ************************************************************************** */
+  2 /*                                                                            */
+  3 /*                                                        :::      ::::::::   */
+  4 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+  5 /*                                                    +:+ +:+         +:+     */
+  6 /*   By: kschneid <marvin@42.fr>                    +#+  +:+       +#+        */
+  7 /*                                                +#+#+#+#+#+   +#+           */
+  8 /*   Created: 2022/09/01 15:42:37 by kschneid          #+#    #+#             */
+  9 /*   Updated: 2022/09/01 16:03:42 by kschneid         ###   ########.fr       */
+ 10 /*                                                                            */
+ 11 /* ************************************************************************** */
+ 12 #include <unistd.h>
+ 13
+ 14 void    ft_print_number(void)
+ 15 {
+ 16     char    c;
+ 17
+ 18     c = '0';
+ 19     while (c <= '9')
+ 20     {
+ 21         write(1, &c, 1);
+ 22         c++;
+ 23     }
+ 24 }
