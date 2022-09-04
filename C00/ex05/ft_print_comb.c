@@ -3,43 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kschneid <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tgaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 17:07:43 by kschneid          #+#    #+#             */
-/*   Updated: 2022/08/31 17:10:33 by kschneid         ###   ########.fr       */
+/*   Created: 2022/08/31 17:37:02 by tgaspard          #+#    #+#             */
+/*   Updated: 2022/09/01 20:56:54 by tgaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
-void    putchar(char c)
+
+void	display(char a1, char a2, char a3)
 {
-    write(1, &c, 1);
+	if (!(a1 == a2 || a2 == a3 || a1 == a3))
+	{	
+		write(1, &a1, 1);
+		write(1, &a2, 1);
+		write(1, &a3, 1);
+		if (!(a1 == '7' && a2 == '8' && a3 == '9'))
+		{
+			write(1, ", ", 2);
+		}
+	}
 }
-void ft_print_comb()
+
+void	ft_print_comb(void)
 {
-    char a, b ,c;
-    a = '0';
-    b = '1';
-    c = '2';
-    while (a <= '7')
-    {
-        while (b <= '8')
-        {
-            while (c <= '9')
-            {
-                putchar(a);
-                putchar(b);
-                putchar(c);
-                putchar(' ');
-                c++;
-            }
-            b++;
-            c = b + 1;
-        }
-        a++;
-        b = a;
-    }
-}
-int main()
-{
-    ft_print_comb();
+	char	a1;
+	char	a2;
+	char	a3;
+
+	a1 = '0';
+	while (a1 <= '7')
+	{
+		a2 = a1 + 1;
+		while (a2 <= '8')
+		{
+			a3 = a2 + 1;
+			while (a3 <= '9')
+			{
+				display(a1, a2, a3);
+				a3++;
+			}
+		a2++;
+		}
+	a1++;
+	}	
 }
