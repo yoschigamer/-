@@ -6,7 +6,7 @@
 /*   By: kschneid <kschneid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 07:28:24 by kschneid          #+#    #+#             */
-/*   Updated: 2022/09/15 23:55:15 by kschneid         ###   ########.fr       */
+/*   Updated: 2022/09/17 18:50:47 by kschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,25 @@ int ft_is_prime(int nb);
 
 int main(void)
 {
-	int nb = 67;
-	printf("%d", ft_is_prime(nb));
+	int nb = 11;
+	printf("%d", ft_is_prime(2000000011));
 	return (0);
 }*/
 
 int	ft_is_prime(int nb)
 {
-	int	i;
+	int	n;
 
-	i = 2;
+	n = 2;
 	if (nb < 2)
 		return (0);
-	while (nb % i / 2)
+	while (n <= nb / 2)
 	{
-		if (nb % i == nb)
+		if (nb % n == 0)
+		{
 			return (0);
-		i++;
+		}
+		n++;
 	}
 	return (1);
 }

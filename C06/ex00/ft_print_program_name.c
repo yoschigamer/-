@@ -6,14 +6,14 @@
 /*   By: kschneid <kschneid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 01:06:37 by kschneid          #+#    #+#             */
-/*   Updated: 2022/09/14 02:08:36 by kschneid         ###   ########.fr       */
+/*   Updated: 2022/09/17 17:07:31 by kschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    write(1, argv[0], sizeof(argv[0]));
-    return 0;
+	write(1, argv[0], sizeof(argv[0]));
+	return (0);
 }
