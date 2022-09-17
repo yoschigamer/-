@@ -12,3 +12,6 @@ C04 | 70
 C05 | NO
 C06 | NO
 C07 | NO
+Exam00 | 48
+Exam01 | 32
+Exam02 | 28
