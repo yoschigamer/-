@@ -17,4 +17,4 @@ Exam00 | 48
 Exam01 | 32
 Exam02 | 28
 ExamFinal | 42
-Refusé 
+Refusé | ❌
